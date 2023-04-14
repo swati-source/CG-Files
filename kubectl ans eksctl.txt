@@ -1,0 +1,12 @@
+
+kubectl
+
+(https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
+
+eksctl 
+(https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html)
+
+if this dosent work then try with 
+
+export PATH=$PATH:/usr/local/bin/
+

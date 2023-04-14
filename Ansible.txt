@@ -1,0 +1,109 @@
+we probably involve doing lot of repatitive tasks in our environment weather it might be creating vm's
+everyday configuration on them,patching,migration,deploying application or performing security &audits
+all of these repitative tasks involve execution of 100's of commands 100's on diff servers, and
+mantaining them, so to simplify this we have scripts to automate this tasks ana lot of times to put
+these scripts together we require Ansible 
+lets take a simple use case
+imagine that we have lots of servers some are web and some are database svrs ao we would like to
+power down or up the webservers or want do configuration changes/ modifying them, installing applications on them 
+firewall rules etc..so to do this we can write Ansible playbook to reduce manual work which has 
+lots of module available in ansible that supports these kind of operations
+
+there are some inventory parameters in ansible 
+ansible_host - use to specify the ip address of the servers
+ansible_connection - defines how ansible connects to the target svr weather ssh/winrm/localhost
+                                                                    (not connect to remote host)
+ansible_port - defines which port tot connect to, by default it is set port 22 to ssh
+ansible_user - defines user used to make the remote conncetions by default it root for linux machines
+ansible_ssh_pass- set a passwd                    
+  
+Ansible is an open-source, cross-platform tool for resource provisioning automation 
+that DevOps professionals popularly use for continuous delivery of software code by taking 
+advantage of an “infrastructure as code” approach.
+Ansible can be used to provision the underlying infrastructure of your environment, 
+virtualized hosts and hypervisors, network devices, and bare metal servers.
+It can also install services, add compute hosts, and provision resources, services, and applications
+inside cloud.
+with only few lines of instruction in an ansible playbook
+YAML is a digestible data serialization language often used to create configuration files with any programming 
+language. Designed for human interaction, it can do everything that JSON can and more
+
+
+## Lauch Basic EC@2 instance in mumbai region.
+---
+- hosts: localhost
+  tasks:
+    - name: ensure httpd is installed
+      yum:
+        name: httpd
+        state: latest
+    - name: start httpd
+      service:
+        name: httpd
+        state: started
+
+    
+
+
+## Lauch Basic EC@2 instance in mumbai region.
+---
+- hosts: localhost
+  vars:
+    pkgname: httpd
+  tasks:
+    - name: ensure httpd is installed
+      yum:
+        name: '{{pkgname}}'
+        state: latest
+   
+
+---
+- hosts: localhost
+  vars:
+    pkgname: httpd
+  tasks:
+    - name: ensure httpd is installed
+      action: yum 
+        name: '{{pkgname}}'
+        state: latest
+        notify: restart httpd
+  handlers:
+    - name: restart httpd
+      service:
+        name: httpd
+        state: restarted
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

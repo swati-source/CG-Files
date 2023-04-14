@@ -1,0 +1,41 @@
+echo Hi user welcome
+echo what is your name
+read name
+echo Hi name is $name, welcome
+
+
+------------------------------------------------
+for loop
+for i in {1..10..2};
+do
+        echo "number $i"
+done
+-----------------------------------------------------
+while loop
+num=10
+count=5
+while [ $count -le $num ]
+do
+        echo $count
+        let count++
+done
+
+----------------------------------------------
+
+a=12
+b=12
+if [ $a == $b ]
+then
+echo " a is equal to b"
+else
+echo " a is not equal to b"
+fi
+
+------------------------------------------------------
+NAME[0]="abc"
+NAME[1]="def"
+NAME[2]="ghi"
+NAME[3]="jkl"
+NAME[4]="mno"
+echo "First Index: ${NAME[0]}"
+echo "Second Index: ${NAME[1]}"

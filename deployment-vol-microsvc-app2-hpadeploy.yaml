@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: service-{{NAME}}
+  labels:
+    app: {{NAME}}
+  namespace: {{NAMESPACE}}
+spec:
+  replicas: {{REPLICAS}}
+  selector:
+    matchLabels:
+      app: {{NAME}}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        app: {{NAME}}
+    spec:
+      containers:
+      - name: {{NAME}}
+        image: {{ECR}}/{{IMAGENAME}}:{{VERSION-NUMBER}}
+        env:
+        - name: NODE_ENV
+          value: {{NODE_ENV}}
+        ports:
+        - containerPort: {{PORT}}
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 200m
+            memory: 1024Mi
+          limits:
+            cpu: 1200m
+            memory: 2560Mi
+        volumeMounts:
+          - name: commoncode-vol
+            mountPath: /usr/src/app/common
+            readOnly: true
+      volumes:
+      - name: commoncode-vol
+        persistentVolumeClaim: 
+          claimName: commoncode-efs-pvc-rw
+
+---
+          
+apiVersion: autoscaling/v2beta2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+  name: {{NAME}}
+  namespace: {{NAMESPACE}}
+spec:
+  maxReplicas: 10
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: service-{{NAME}}
+  metrics:
+    - resource:
+        name: memory
+        target:
+          averageUtilization: 80
+          type: Utilization
+      type: Resource
+    - resource:
+        name: cpu
+        target:
+          averageUtilization: 50
+          type: Utilization
+      type: Resource
+ 

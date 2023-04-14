@@ -1,0 +1,32 @@
+What is the State File in Terraform?
+When you run terraform apply command to create an infrastructure on cloud, 
+Terraform creates a state file called “terraform.tfstate”. This State File contains full details of resources in our terraform code. 
+When you modify something on your code and apply it on cloud, terraform will look into the state file,
+ and compare the changes made in the code from that state file and the changes to the infrastructure based on the state file.  
+
+What is the Terraform Backup State File?
+Terraform has another file called terraform.tfstate.backup . This file is like a version of the tfstate file
+Whenever we modify something on our code and apply it, our tfstate file will change our resources’ information. 
+At that point this backup file acts as an old version of the state file. 
+So the modified resources details are in the tfstate file, and the old tfstate file will be transferred to tfstate.backup file
+
+
+Use S3  for Locking State File
+Here we use our S3 bucket as a backend for storing our state file in shared storage. 
+It helps to use the same state file for multiple users who have access to the S3 bucket.
+
+Use Terraform Workspaces for Isolating State File
+ For example, if you want to change something for testing purposes in a staging environment, 
+you may have accidentally applied the changes in the Production environment that are really worse.
+ For this type of caution, here Terraform Workspaces comes in.
+ We can use every workspace for each environment. 
+
+Basic commands for Terraform State
+terraform state list ------- List all the objects that are present in the state file. Just take a list of all the resources names.
+terraform state show <resource_name> -- Show details about an object in the state file. It gives complete details of a particular resource mentioned in the command
+terraform state mv <resource_name>------ this command we just move the new configuration to the old one with the new name. So,
+ it won’t delete the resource and recreate it, just modify the changes. 
+terraform state pull   --------------- Output of the current state to standard out (get all resources).It will give the complete detail of our state file in a standard format.
+terraform state push---------------Update remote state from local. It helps to manually update a local state file to a remote state.
+
+

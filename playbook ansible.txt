@@ -1,0 +1,21 @@
+adhoc commands- kind of a linux comands (No idem potency) executes instructions each and every time 
+it overites or repeats everytime...we use this when we wnat to create or change configuration on
+100 1000's of nodes ...it perform quick functions for a small works.
+ uses the /usr/bin/ansible command-line tool to automate a single task on one or more managed nodes
+adhoc commands are quick and easy, but they are not reusable
+
+Playbook Playbook is a blueprint of automation tasks—which are complex IT actions executed with
+ limited or no human involvement. Ansible Playbooks are executed on a set, group, or
+ classification of hosts, which together make up an Ansible inventory
+basically its like a file where we can write a codes which consists of vars,taks,handlers,template
+ & roles. 
+each playbook is composed of 1 or more module -----is collection of configuration files
+playbook is divided into many sessions
+target section---which defines the host and all
+variable------defines variables
+tasks section-----has list of modules that need to run in an order.
+handler -------to start or restart the servers 
+roles------for organizing the task into directiory structure.
+
+
+

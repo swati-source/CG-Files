@@ -1,0 +1,16 @@
+considering that we have n no of pods running in frontend, backend, or database etc..
+the frontend needs to communicate with backend and backend has to communicate wit database
+the pod has a ip address assigned to them, but these are not static and go down at point
+of time and when replicaset is configured on nodes the replicaset will create new pods
+at the time of pod failure so everytime when pods gets created new ips will be created
+so becomes diff to remember pod ip each and every time to connect to application
+so we cannot rely on ip address for internal communication btwn applications
+          service helps us to group these pods and provide a single interface to access
+the pods in group eg: a service created front-end pods will help group together and provide
+a single interface for other pods to access a service.
+service provides virtual ip to Rs this ip gets mapped to pods ip in the node
+nodeport(30000-32,767) it works on top of cluster ip 
+ we map the port no to virtual ip...node will be connected to virtual ip 
+whenever we want to access the node/pod application we access through port no 
+as this port no goes and mapped to virtual ip, as virtual ip will be connected to node ip address where
+where pod container will be running and we can access the application through internet.

@@ -1,0 +1,18 @@
+(Replication controller) we use coz of load balancing and scaling the containers
+ if pod gets deleted or failed it cans deploy another pod, nodespods within the nodes 
+an scales when the demands increses 
+ it makes sure that desired=current
+
+(deployment)if we want to deploy our webserver to the production env, whenever 
+newer version of the application build becomes available on docker registery,
+we would like to update our instance, so however if we want to update the instances we 
+cannot upgrade all at a time coz users will be accessing the application so we upgrade
+one after the other this is known as rollin upgrades.
+   suppose one of the upgrades resulted in an error and if we are asked to do undo 
+the recent changes we can roll back to the recent changes.
+    if we are doing multiple changes to the env such as upgrading underline hardware,
+ modifying the resources etc .. we pause the env and make changes and then run so 
+all the changes are rolled out together 
+
+provides ability to upgrade the underlined instance using rolling updates, changes 
+and pausing whenever required (take down older version and brings up the newer version)

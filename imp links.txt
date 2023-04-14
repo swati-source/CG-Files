@@ -1,0 +1,46 @@
+https://caesars.okta.com/login/default?fromURI=%2fapp%2fUserHome
+ServiceDesk@caesars.com
+
+czrpartners.gpcloudservice.com
+
+https://github.caesars.com/Rewards-as-a-Service/
+https://github.caesars.com/Infra-as-a-service
+https://github.caesars.com/Rewards-as-a-Service/jenkins-shared-lib/tree/dev/vars
+https://caesarsdevelopment.atlassian.net/jira/software/c/projects/RAAS/boards/311
+https://www.dynatrace.com/
+Jira Links – https://caesarsdevelopment.atlassian.net/jira/software/c/projects/DAASS/boards/222
+Confluence Link - https://caesarsdevelopment.atlassian.net/wiki/spaces/DaaS/overview
+Okta Page Link- https://caesars.okta.com/app/UserHome
+
+
+https://raasjenkins.harrahs.org:8443/
+username: swathi
+passwd: swathi@123
+
+git config --global credential.helper store
+
+meeting link 12:30pm
+https://teams.microsoft.com/l/meetup-join/19%3ameeting_Y2NlZTg2NDMtNzVlNy00ZWYwLTlkNTItMTZlNmYzY2NkYmYz%40thread.v2/0?context=%7b%22Tid%22%3a%2276a2ae5a-9f00-4f6b-95ed-5d33d77c4d61%22%2c%22Oid%22%3a%226e21dea0-388f-4f3f-906a-6c98bbdbe85d%22%7d
+
+kt vedio link
+https://capgemini.sharepoint.com/:x:/r/sites/CaesarsEntertainmentTransition/_layouts/15/Doc.aspx?sourcedoc=%7B76304147-1022-479F-9D76-65644A65AEF4%7D&file=AWS-Devops-KT-Details.xlsx&wdOrigin=TEAMS-ELECTRON.p2p.bim&action=default&mobileredirect=true
+
+https://capgemini.sharepoint.com/sites/CaesarsEntertainmentTransition/_layouts/15/stream.aspx?id=%2Fsites%2FCaesarsEntertainmentTransition%2FShared%20Documents%2FGeneral%2FTransition%2FKnowledge%20Exchange%2FPlatform%20Environment%20Support%2FKT%20Recordings%2FDay%20%2D6%2E2%20Platform%20Environment%20Support%2001%2D19%2D2022%2Emp4
+
+xl link- announcement group leave april
+https://capgemini-my.sharepoint.com/:x:/g/personal/ankita_b_agarwal_capgemini_com1/ET_wlB2rejFAsjvjycTbyakBn2e8I4yE4z3_flb1CU_ghA?e=sKdlhx&wdOrigin=TEAMS-ELECTRON.p2p.bim&wdExp=TEAMS-CONTROL&wdhostclicktime=1681395065868&web=1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

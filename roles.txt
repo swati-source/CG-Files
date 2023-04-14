@@ -1,0 +1,9 @@
+handler---------- As earlier mentioned, handlers are just like other tasks in a playbook, 
+the difference being that they are triggered using the notify directive, 
+and are only run when there is a change of state.
+
+roles------Roles let you automatically load related vars, files, tasks, handlers, and other Ansible
+artifacts based on a known file structure. After you group your content in roles, 
+we can easily reuse them and share them with other users.
+Role is a set of tasks and additional files to configure host to serve for a certain role. 
+Playbook is a mapping between hosts and roles.

@@ -1,0 +1,105 @@
+Linux Commands
+
+ 
+
+1. ls-to list the contents of a directory
+2.ps- to list the running processes
+  ps -aux  -used to manage and monitor a program's memory usage,
+        processor time, and I/O resources.
+3.mpstat-provides the information about cpu performance and utilization by giving cpu statistics.
+4.ls-l -will print the name of all the files and directories only.
+5.ls-lh - to know the size of a file.
+6.ls -a -to show all files including hidden one.
+7.ls -R - to list the directories recursively.
+  Ls -lrt- to list the contents of the directory.
+8.ls-lhs-to list the files longest at the top.
+9.env-to list all the environment variables.
+10.echo-to print the text
+11.whoami-to know the currently logged user.
+12.sudo su-to go to root user.
+13.sudo bash-to change the currently logged user to another user.
+14.Top-to display information about cpu and memory utilization.
+        It provides a dynamic real-time view of the running system.
+         processes that are consuming most system resources.
+15.pwd-to know prasent working directory.
+16.ls -ltc-last modified file will come first.
+17.uname -r-to  know kernel release number.
+18.uname -m- to know kernel machine type.
+19.uname -o- to know name of Operating system.
+   uname -n- to know the hostname
+   uname -p to know the processors
+   uname -a to now all info of kernal,hostname etc..
+   uname -s store information identifying the current system in the structure pointed to by name.
+20.cd- :to go to last working directory.
+21.history-will display all commands till now.
+22.mkdir- to create a directory.
+23.cddir-to move inside directory.
+24.touch - to create a file.
+25. vi -to edit the file.
+26. cat - to see the content inside the file.
+27.head -3 filename-to see the first 3 lines of a file.
+28.tail -4 filename-to see the last 3 lines of a file.
+29.wc -l-to know the number of lines in a file
+30.wc -w-to know the number of words in a file.
+31.wc-m- to know the number of characters in a file.
+32.sort -n filename  -to sort the contents of a file numerically.
+33.sort -u filename - to sort the contents of a file alphabetically.
+34.Grep: is used to search for a string/keyword of characters in a specified file.
+Grep -i "swati"-it will highlet the word swati.
+Grep a.. filename -it will highlet two letters after a.
+Grep ..a filename- it will highlet two letters before a.
+Grep -c filename- it will show how many shiva words are there in a file.
+chmod +x filename- to give all permissions.
+cp- to copy files and directories from one directory to another
+mv-  move files and directories from one directory to another or to rename a file or directory
+tar- tar -cvf tes.tar test
+     tar -xvf 
+gz- tar -czvf test.tar.gz test
+     tar -xzvf
+
+zip -m test.zip -delete the original files after the zip file is created.
+zip -e secret.zip -to create a password-protected zip file.
+sudo usermod -a -G java username
+
+netstat -pnltu
+corn -e,-l,-r,-v
+***** /bin/bash /home/user/desktop/filename.sh
+
+netstat -pntlu 
+netstat -anp | grep apache
+
+The du command displays the number of blocks used for files
+df command is used to display the disk space used in the file system.
+
+lsof -i -n -p | grep LISTEN 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

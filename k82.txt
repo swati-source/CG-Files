@@ -1,0 +1,19 @@
+kubernetes services provides communication  betwen various componets
+ within or outside of the appliactions, helps us to connect the application
+together with other appliactions or users
+suppose we have appliaction which has groups of pods one for  serving frontend
+ other for backend and other for database so these services enable the connetivity 
+between these pods.
+
+it enables frontend appliacton to made available to end users, it helps communication
+between backend and frontend pods and thus establish connectivity between database
+
+Nodeport - basically its like an object replication controller,deploynment as we seen it
+it listen to the port in the node and forward the request of that port  
+on the pod to listen to a appplication
+ helps us make an external facing appliaction available on the port on worker nodes
+
+clusterip- service creates the virtual ip inside the cluster to enable the communication
+diff services such as frontend and backend servers.
+ 
+loadbalancer- distribute the load accross the webservers in front end tier

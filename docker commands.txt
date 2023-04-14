@@ -1,0 +1,30 @@
+Docker commands:
+1. docker -version :to know the currently installed version of docker.
+2.sudo service docker start: to start the docker conatiner.
+3.docker ps : to know the runnning containers.
+4.docker ps -a : to know the running containers and exited containers.
+5.docker images : to know the locally stored docker images.
+6.docker images -q : to know the locally stored docker images with their image id.
+7.docker rm <container id> : to delete the stopped container.
+8.docker rmi < image id> : to delete the docker image from local storage.
+9.docker push <username> <image name> : to push the image into docker hub.
+10.docker pull <image name> : to pull images from docker hub
+11.docker run -it -d <image name> : to create a container from an image
+12.docker stop < container id> : to stop running container slowly.
+13. docker kill <container id>: to stop running conatiner immediately.
+14. docker exec -it < container id> : to access the runnning container.
+15. docker run -d -p 8080:80 nginx : creates a new container using the official Nginx image and 
+                                     maps port 80 on the container to port 8080 on the host
+
+kubectl run my-pod --image=nginx --port=80
+kubectl exec testpod -c c00 --hostname -i :To know the specific ip address of the pod
+kubectl exec testpod -it -c co2 -- /bin/bash :To go inside the pod/container
+kubectl get nodes: To know how many nodes are there
+kubectl get pods: To know how many pods are there
+kubectl describe pod testpod: Describes the pod gives info about eher is it running etc
+kubectl delete pod testpod: Deletes the particulur pod.
+kubectl describe pod testpod -c c00: Describes the pod with a specific container
+kubectl logs -f testpod: if we want to check the logs
+kubectl apply -f pod.yml: To create pod
+kubectl get pods -o wide: displays a list of all pods in the current namespace, 
+                            along with other information.

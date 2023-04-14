@@ -1,0 +1,7 @@
+https://brad-simonin.medium.com/create-an-aws-vpc-and-subnet-using-terraform-d3bddcbbcb6
+
+https://dev.to/chefgs/create-apache-web-server-in-aws-using-terraform-1fpj#terraform-introduction
+
+sudo yum install -y yum-utils shadow-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum -y install terraform

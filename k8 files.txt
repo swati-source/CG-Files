@@ -1,0 +1,39 @@
+v1 -  1st stable version release of kubernetes api
+apps/v1 - apps is the most common API group in Kubernetes It includes functionality related to running applications on Kubernetes
+         like Deployments, RollingUpdates, and ReplicaSets. This API version allows pods to be autoscaled based on different resource usage metrics.
+
+
+
+
+
+creating normal pod:
+
+apiversion: v1
+kind: pod
+metadata:
+ name: nginx
+ label:
+  apps: nginx
+  tier: frontend
+spec:
+ container:
+  - name: nginx
+    inamge: nginx
+
+-----------------------------------------------------------------------------------------------------
+if we want to pass the password value
+
+apiversion: v1
+kind: pod
+metadata:
+ name: nginx
+ label:
+  apps: nginx
+  tier: frontend
+spec:
+ container:
+  - name: nginx
+    image: nginx
+    env:
+     - name: ngnix_password
+       value: mypassword  

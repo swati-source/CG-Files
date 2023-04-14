@@ -1,0 +1,18 @@
+1. Instaling jenkins and docker on server and check both are up and running.
+2. signing into the jenkins dashboad and add dockerhub credentials.
+3. download the docker pipeline plugin and docker plugin.
+4. create a new pipeline job and start with the pipeline script
+5. script contains 3 stages - checkout , build and deploy.
+6. 1st checkout from git repo and run it
+7. 2nd build the docker image 
+8. 3rd deploy onto the docker hub.
+
+
+
+links:
+https://www.youtube.com/watch?v=CEyfsQq3QEM&t=163s
+https://www.coachdevops.com/2020/05/automate-docker-builds-using-jenkins.html
+
+To change port number in amazon linux machine to use:  
+                  vi /usr/lib/systemd/system/jenkins.service 
+ 

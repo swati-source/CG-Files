@@ -1,0 +1,19 @@
+(api-server) like a frontend for kubernetes, it actually intracts with k8's cluster
+user, cli, managemnet devices  intract with api
+
+(etcd)  key-value store to store all the data used to manage the cluster like multiple nodes,
+ master hoe many are there and all it stores by this it ensure no conflicts bten masters and nodes.
+
+(scheduler) distributing work/containers across multiple nodes, creats containers and 
+             assign to nodes.
+(controller) responsible for responding to when nodes or containers end point goes down
+             so it takes the decision to bring them up.
+(container run time) underlined software used to run the container (docker, rocket)
+(kublet)  agent that makes sure containers are running in nodes,intracts wih the api server to proviede
+          the health information about the working node and this info gets stored in etcd.
+
+(kubectl)  used to deploy and manage the application application on kubernetes cluster
+           gets the status of nodes containers etc....
+           kubectl get nodes, pods, cluster info.
+           kubectl run nginex 
+
